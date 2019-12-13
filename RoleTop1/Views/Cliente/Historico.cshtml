@@ -1,0 +1,45 @@
+@model RoleTop.ViewModels.HistoricoViewModel
+@{
+ViewData["Title"] = "Contratos - RoleTop";
+ViewData["H2"] = "Historico de Contratos";
+}
+<main>
+<h2>
+     @ViewData["H2"]
+</h2>
+<table>
+     <thead>
+          <tr>
+               <th>Tipo</th>
+               <th>Data</th>
+               <th>Convidados</th>
+               <th>Privacidade</th>
+               <th>Serviços</th>
+               <th>Status do Evento</th>
+          </tr>
+     </thead>
+     <tbody>
+          @foreach( var contrato in Model.Contratos ) 
+          {
+               <tr>
+               <td>@contrato.Evento.Tipo</td>
+               <td>@contrato.Evento.Data</td>
+               <td>@contrato.Evento.Convidados</td>
+               <td>@contrato.Evento.Privacidade</td>
+               <td>@contrato.Evento.Servicos</td>
+               @if (@contrato.Evento.Status == 0)
+               {
+                    <td>Em análise</td>
+               } else if (@contrato.Evento.Status == 1)
+               {
+                    <td>Aprovado</td>
+               } else if(@contrato.Evento.Status == 2)
+               {
+                    <td>Reprovado</td>
+               }
+               </tr>
+          }
+     </tbody>
+</table>
+
+</main>

@@ -1,0 +1,253 @@
+
+#painel {
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 1.8em;
+    padding: 50px;
+    margin: 15px;
+}
+
+h3 {
+    padding: 0.5em 0;
+    font-size: 1.3em;
+    color: #361a0c;
+    text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+   -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+    margin: 20px;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: black 2 2 2;
+    
+}
+
+.box-status-pedidos {
+    width: 30%;
+    padding-top: .5em;
+    text-align: center;
+}
+.box-status-pedidos > p {
+    font-size: 2em;
+    padding: 0.5em 0 0 0;
+}
+
+.reprovados {
+    background-color: #a70000;
+}
+
+.aprovados {
+    background-color: #669100;
+}
+
+.pendentes {
+    background-color: #ff9933;
+}
+
+table {
+    text-align: center;
+    border: 1px dashed #ff9933;
+    width: 100%;
+    padding: 5px;
+    word-break: normal;
+}
+
+table th {
+    background-color:#a70000;
+}
+
+table a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+tfoot td {
+    text-align: center;
+    color: #ff9933;
+    background-color: #a70000;
+}
+
+thead > tr:first-child > th:last-child {
+    padding: 0 .5em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*quando for calcular o tamanho do elemento o html considera o tamanho da borda e do padding no tamanho total do elemento*/
+}
+
+
+body {
+    font-family: 'Calibri', 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ff9933;
+    text-shadow: 2px 2px #222222;
+}
+
+
+ 
+
+/**************************************************************************************************
+                                            NAV
+***************************************************************************************************/
+
+nav {
+    background-color: #ff9933;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+
+nav ul > li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul > li > a {
+	display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #361a0c;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    background-color: #c4794d;
+    color: #fff;
+}
+
+a.active {
+    color: #c4794d;
+}
+
+#banner img {
+    padding: 1em 0 1em 1em;
+    width: 65%;
+}
+    
+/**************************************************************************************************
+                                            Tela do Administrador
+***************************************************************************************************/
+main{
+    height: 810px;
+    background-image: url("~/img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0;
+    } 
+    
+input{
+    color: white;
+}
+    
+label{
+    color: #ff9933;
+}
+
+.login{    
+    padding-top: 60px;
+    text-align: center;
+    }
+
+.botao{
+    align-items: center;
+    font: arial;
+    border: black  2 solid;
+    box-shadow: black solid 5 5 5;
+    font-size: 1.2 em;    
+    background-color: #ff9933;
+    padding: 0.2em 2em;
+    margin: 5% 50%;
+    box-shadow: black 2px 2px 5px;
+    }
+
+.menulogin{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+.redeslogin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    }
+
+#face{
+    border: black solid 2px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    }
+
+#google{
+    border: black solid 2px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    }
+#logogoogle{
+    display: flex;    
+    }
+
+input{
+    /*width: 200px;*/
+    height: 25px;
+    }   
+
+    .rodape{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:  #ff9933;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        }
+
+a{
+    color: #fff;
+}
+
+
+
+@media (max-width: 625px) {
+    main {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+
+}

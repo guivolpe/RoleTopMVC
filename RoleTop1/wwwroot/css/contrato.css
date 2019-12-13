@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*quando for calcular o tamanho do elemento o html considera o tamanho da borda e do padding no tamanho total do elemento*/
+}
+
+   
+body {
+    font-family: 'Calibri', 'Open Sans', sans-serif;
+    background-image: url("~/img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #ff9933;
+}
+
+/**************************************************************************************************
+                                            NAV
+***************************************************************************************************/
+
+nav {
+    background-color: #ff9933;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+
+nav ul > li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul > li > a {
+	display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #361a0c;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    background-color: #c4794d;
+    color: #fff;
+}
+
+a.active {
+    color: #c4794d;
+}
+
+/**************************************************************************************************
+                                            CORPO
+***************************************************************************************************/
+
+section h2{
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px #222222;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 2px;
+    width: 45%;
+    margin: 5px 0;    
+    }
+ 
+    .botao{
+        font: arial;
+        border: black  2 solid;
+        font-size: .8em;    
+        background-color: #ff9933;
+        padding: 0.2em;
+        margin: 5% 40%;
+        box-shadow: black 2px 2px 5px;
+      }
+    
+    .texto{
+        font: arial;
+        font-size: 1.5em;
+        color: #ff9933;
+        text-shadow: black 2px 2px 2px;
+        }
+
+        .cadastro{    
+        padding-top: 60px;
+        text-align: center;
+        color: #ff9933;
+        text-shadow: 2px 2px #222222;
+        }
+
+      #cadastro1{          
+        padding: 1em;
+        margin: 2em 2%;
+        }
+
+    .cadcol{
+        display: flex;
+        justify-content: space-around;
+        font: arial;
+        font: bold;
+          font-size: 1.2em;
+          color: #ff9933;
+          text-shadow: black 2px 2px 2px;
+        }
+
+    .cadco2{
+        display: flex;
+        justify-content: space-around;
+        font: arial;
+        font: bold;
+        font-size: 1.2em;
+        color: #ff9933;
+        text-shadow: black 2px 2px 2px;
+            }
+
+    .colcenter{
+        display: flex;
+        justify-content: center;    
+    }
+
+    input{
+        height: 25px;
+        }  
+
+    .botao{
+        font: arial;
+        font: bold;
+        border: black  2 solid;
+        font-size: .8 em;    
+        background-color: #ff9933;
+        padding: 0.2em;
+        margin: 5% 30%;
+        box-shadow: black 2px 2px 5px;
+        }
+
+
+
+
+  
+/**************************************************************************************************
+                                            RODAPÉ
+***************************************************************************************************/
+         
+.rodape{
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  #ff9933;
+    opacity: 0.9;
+    color: rgb(56, 56, 56);
+    text-align: center;
+    }
+
+    
+ 

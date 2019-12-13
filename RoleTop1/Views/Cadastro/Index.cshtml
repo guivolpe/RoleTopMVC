@@ -1,0 +1,75 @@
+@model RoleTop.ViewModels.RespostaViewModel
+<main>
+    <h2 class="cadastro">Cadastro</h2>
+    @if(!string.IsNullOrEmpty(@Model.Mensagem))
+    {
+        <p>@Model.Mensagem</p>
+    }
+    <form method="POST" action='@Url.Action("Cadastrar", "Cadastro")'>
+        <div id="cadastro1">
+            <div id="cadcol1">
+                <div>
+                    <label for="nome">Nome</label>
+                    <br>
+                    <input type="text" name="nome" required>
+                </div>
+                
+                <div>
+                    <label for="cpf">CPF</label>
+                    <br>
+                    <input type="number" name="cpf" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="cep">CEP</label>
+                    <br>
+                    <input type="text" name="cep" required>
+                </div>
+
+                <div>
+                    <label for="logradouro">Logradouro</label>
+                    <br>
+                    <input type="text" name="logradouro" required>
+                </div>
+
+                <div>
+                    <label for="complemento">Complemento</label>
+                    <br>
+                    <input type="text" name="complemento">
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <br>
+                    <input type="number" name="telefone" required>
+                </div>
+            
+
+            
+                <div>
+                    <label for="senha">Senha</label>
+                    <br>
+                    <input type="password" name="senha" minlength="6" required>
+                </div>
+
+                <div>
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <br>
+                    <input type="password" name="confirmar-senha" minlength="6" required>
+                </div>
+                <br>
+                
+                <input type="submit" value="Cadastrar">
+            </div>
+
+            <br>
+            
+        </div>
+    </form>
+</main>

@@ -1,0 +1,67 @@
+@model RoleTop.ViewModels.DashboardViewModel
+<main>
+    <h2>Área do Administrador</h2><br>
+    <section id="status-pedidos">
+        <h3>Status dos pedidos</h3>
+        <div id="painel">
+            <div class="box-status-pedidos aprovados">
+                <p>Aprovados</p>
+                <p>@Model.ContratosAprovados</p>
+            </div>
+            <div class="box-status-pedidos pendentes">
+                <p>Pendentes</p>
+                <p>@Model.ContratosPendentes</p>
+            </div>
+            <div class="box-status-pedidos reprovados">
+                <p>Reprovados</p>
+                <p>@Model.ContratosReprovados</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lista-pedidos">
+        <br>
+        <h3>Lista de pedidos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Cliente</th>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                    <th>Convidados</th>
+                    <th>Privacidade</th>
+                    <th>Serviços</th>
+                    <th colspan="2" rowspan="2">Aprovar</th>
+                </tr>                   
+            </thead>
+
+            <tbody>
+                @foreach (var contrato in Model.Contratos)
+                {
+                    <tr>
+                        <td>@contrato.Cliente.Nome</td>
+                        <td>@contrato.Evento.Tipo</td>
+                        <td>@contrato.Evento.Data</td>
+                        <td>@contrato.Evento.Convidados</td>
+                        <td>@contrato.Evento.Privacidade</td>
+                        <td>@contrato.Evento.Servicos</td>
+                        <td><a href='@Url.Action("Aprovar", "Contrato", new {id = @contrato.Evento.Id})'><i class="fas fa-check"></i></a></td>
+                        <td><a href='@Url.Action("Reprovar", "Contrato", new {id = @contrato.Evento.Id})'><i class="fas fa-times"></i></a></td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="8">
+                        <p>Pedidos atualizados em @DateTime.Now</p>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+        <form method="GET" asp-controller="Home" asp-action="Index">
+        <input class="botao" type="submit" value="sair">
+        </form>
+    </section>
+</main>

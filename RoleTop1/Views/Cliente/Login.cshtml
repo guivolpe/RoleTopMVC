@@ -1,0 +1,66 @@
+@model RoleTop.ViewModels.RespostaViewModel
+
+<main>
+    <h2>Login</h2>
+    <form method="POST" action='@Url.Action("Login", "Cliente")'>
+<div class="menulogin">
+    @if(!string.IsNullOrEmpty(@Model.Mensagem)){
+        <p>@Model.Mensagem</p>
+    }
+    <div>
+        <label for="email">Email</label>
+        <br />
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="senha">Senha</label>
+        <br />
+        <input type="password" id="senha" name="senha" required>
+    </div>
+    <input type="submit" value="Entrar">
+</div>
+
+        <div id="link-cadastro">
+            <a  href='@Url.Action("Index", "Cadastro")'>Cadastre-se</a>
+        </div>
+    </form>
+</main>
+
+<!-- <main>
+    <div class="menulogin">
+        <h3 id="login">Login</h3>
+        <form method="POST" action='@Url.Action("Login", "Cliente")'>
+
+            @if(!string.IsNullOrEmpty(@Model.Mensagem))
+            {
+                <p>@Model.Mensagem</p>
+            }
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <br>
+            <div>
+                <label for="email">Senha</label>
+                <input id="email" name="senha" maxlength="50" type="password">
+            </div>
+        </form>
+        <input class="botao" type="submit" value="Entrar">
+        <br>
+        <a asp-controller="Cadastro" asp-action="Index">Ainda não tem cadastro?</a>
+    </div> -->
+        <br>
+        <div class="redeslogin">
+            <div id="face">
+                <p>Entre</p>
+                <br>
+                <img src="~/img/facebook.png" title="facebook" height="100em"/>
+            </div>
+            <div id="google">
+                <p>Entre</p>
+                <br>
+                <div id="logogoogle">
+                    <img src="~/img/google.png" title="google" height="30em" />
+                </div>
+    </div>
+</main>

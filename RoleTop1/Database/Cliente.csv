@@ -1,0 +1,3 @@
+tipo_usuario=0;nome=Administrador;email=admin@admin.com;senha=123456;telefone=;endereco=;cep=;cpfcnpj=;complemento=
+tipo_usuario=1;nome=guilherme;email=123@123.com;senha=123123;telefone=123123;endereco=123123;cep=123123;cpfcnpj=123123;complemento=123
+tipo_usuario=1;nome=123123;email=gui@123.com;senha=123123;telefone=123123;endereco=123123;cep=123123;cpfcnpj=123123;complemento=

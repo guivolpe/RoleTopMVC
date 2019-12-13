@@ -1,0 +1,48 @@
+<main>
+        <h2 class="orcamento">Contratação</h2>
+        <div id="cadastro1">
+            <form method="POST" action='@Url.Action("Contratar", "Contrato")' class="cadcol" class="cadcol">
+                <div id="cadcol1">
+                    <div>
+                        <label for="data">Data</label>
+                        <br>
+                        <input type="date" name="data" required>
+                    </div>
+
+                    <div>
+                        <label for="tipo">Tipo do Evento</label>
+                        <br>
+                        <input type="text" name="tipo" placeholder="Casamento, formatura, festa..." required>
+                    </div>
+
+                    <div>
+                        <label for="convidados">Convidados</label>
+                        <br>
+                        <input type="number" name="convidados" placeholder="Máximo de 400" required>
+                    </div>
+
+                    <div>
+                        <label for="privacidade">Privacidade do Evento</label>
+                        <select name="privacidade" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="publico">Público</option>
+                        <option value="privado">Privado</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="servicos">Serviços Necessários</label>
+                        <select name="servicos" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="nenhum">Nenhum</option>
+                        <option value="som">Som</option>
+                        <option value="iluminacao">Iluminação</option>
+                        <option value="ambos">Som & Iluminação</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" value="Contratar">
+                </div>              
+        </form> 
+    </div>
+</main> 
